@@ -1,0 +1,42 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+  <!--<meta charset="UTF-8">-->
+  <!--<title></title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<template name="postsList">
+  <div class="posts">
+    {{#each posts}}
+    {{> postItem}}
+    {{/each}}
+  </div>
+</template>
+
+<!--
+*Spacebars is simply HTML, with the addition of three things: inclusions (also sometimes known as “partials”),
+expressions and block helpers.
+
+Inclusions use the  {{> templateName}}  syntax, and simply tell Meteor to REPLACE the inclusion
+WITH THE TEMPLATE of the same name (in our case:  postItem ).
+
+Expressions such as  {{title}}  EITHER call a property of the current object, or the return value of a
+template helper as defined in the current template’s manager (more on this later).
+
+Finally, block helpers are special tags that CONTROL THE FLOW of the template, such as  {{#each}}…
+{{/each}}  or  {{#if}}…{{/if}} .
+
+*There are four major types of template tags:
+
+{{pageTitle}} - Double-braced template tags are used to insert a string of text. The text is automatically made safe. It may contain any characters (like <) and will never produce HTML tags.
+
+{{> nav}} - Inclusion template tags are used to insert another template by name.
+
+{{#each}} - Block template tags are notable for having a block of content. The block tags #if, #each, #with, and #unless are built in, and it is also possible define custom ones. Some block tags, like #each and #with, establish a new data context for evaluating their contents. In the above example, {{title}} and {{content}} most likely refer to properties of the current post (though they could also refer to template helpers).
+
+{{{content}}} - Triple-braced template tags are used to insert raw HTML. Be careful with these! It's your job to make sure the HTML is safe, either by generating it yourself or sanitizing it if it came from a user input.
+-->
