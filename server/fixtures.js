@@ -19,3 +19,7 @@ if (Posts.find().count() === 0) {
     url: 'http://themeteorbook.com'
   });
 }
+
+//We’ve placed this file in the  server/  directory, so it will never get loaded on any user’s browser.
+//    The code will run immediately when the server starts, and make  insert  calls on the database to
+//add three simple posts in our  Posts  collection.
