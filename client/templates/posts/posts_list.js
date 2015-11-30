@@ -1,5 +1,7 @@
 /**
  * Created by Clint on 11/17/2015.
+ *
+ * CONTAINS:  postsList's template logic. (The template's NAME is "postsList".)
  */
 
 var postsData = [

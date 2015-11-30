@@ -24,3 +24,24 @@
   </div>
 </div>
 </body>
+
+<!--
+****NOTES****
+
+*Collections
+In chapter one, we spoke about the core feature of Meteor, the automatic synchronisation of data
+between client and server.
+
+In this chapter, we’ll take a closer look at how that works, and observe the operation of the key
+piece of technology that enables this, the Meteor Collection.
+
+A collection is a special data structure that takes care of storing your data in the permanent,
+server-side MongoDB database, and then synchronising it with each connected user’s browser in
+real-time.
+
+In this program, since we want our posts to be permanent and shared between users, so we’ll start by creating a
+collection called  Posts  to store them in.
+
+Collections are pretty central to any app, so to make sure they are always defined first we’ll put
+them inside the  lib  directory.
+-->
